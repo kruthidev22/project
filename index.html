@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    header{
+        position: sticky;
+        width: 100%;
+        padding: 5px 7%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+    }
+    header .navbar ul{
+        list-style: none;
+    }
+    header .navbar ul li{
+        position: relative;
+        float: left;
+    }
+    header .navbar ul li a{
+        font-size: medium;
+        color: black;
+        padding: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+    }
+    header .navbar ul li a:hover{
+        color: aqua;
+    }
+    .line{
+        border: 2px solid blue;
+        width: 50px;
+        border-radius: 50px;
+        position: relative;
+        top: -450px;
+        left: 200px;
+    }
+    .text1 h2{
+        position: relative;
+        top: -445px;
+        left: 200px;
+        color: white;
+        font-weight: 100;
+    }
+    .text2{
+        position: relative;
+        top: -440px;
+        left: 200px;
+        color: white;
+    }
+    .text3{
+        position: relative;
+        top: -420px;
+        left: 200px;
+        color: white;
+        background-color: blue;
+        width: 110px;
+        height: 40px;
+        padding-top: 8px;
+        padding-left: 6px;
+    }
+    .search-bar{
+        border: 1px solid white;
+        height: 50px;
+        width: 550px;
+        display: flex;
+        gap: 70px;
+        padding: 7px;
+        background-color: white;
+        position: relative;
+        top: -190px;
+        left: 200px;
+        
+    }
+    .search-bar button{
+        background-color: blue;
+    }
+    .scroll-container{
+        display: flex;
+        width: 100%; 
+        justify-content: space-around;
+        gap: 5px;
+        overflow: auto;
+        scrollbar-width: none;
+    }
+    .scroll-container1 .ts{
+        position: relative;
+        color: white;
+        bottom: 70px;
+        left: 10px;
+        font-size: medium;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .scroll-container1 .text{
+        position: relative;
+        color: white;
+        top: -89px;
+        left: 20px;
+    }
+    .scroll-container1 .symbol{
+        position: relative;
+        top: -145px;
+        left: 200px;
+        border: 1px solid white;
+        width: 18px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: larger;
+    }
+    .scroll-container2 .ts{
+        position: relative;
+        color: white;
+        bottom: 70px;
+        left: 10px;
+        font-size: medium;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .scroll-container2 .text{
+        position: relative;
+        color: white;
+        top: -89px;
+        left: 10px;
+    }
+    .scroll-container2 .symbol{
+        position: relative;
+        top: -145px;
+        left: 200px;
+        border: 1px solid white;
+        width: 18px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: larger;
+    }
+    .scroll-container3 .ts{
+        position: relative;
+        bottom: 70px;
+        left: 10px;
+        color: white;
+        font-size: medium;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .scroll-container3 .text{
+        position: relative;
+        color: white;
+        top: -89px;
+        left: 10px;
+    }
+    .scroll-container3 .symbol{
+        position: relative;
+        top: -145px;
+        left: 200px;
+        border: 1px solid white;
+        width: 18px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: larger;
+    }
+    .scroll-container4 .ts{
+        position: relative;
+        bottom: 70px;
+        left: 10px;
+        color: white;
+        font-size: medium;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .scroll-container4 .text{
+        position: relative;
+        color: white;
+        top: -89px;
+        left: 10px;
+    }
+    .scroll-container4 .symbol{
+        position: relative;
+        top: -145px;
+        left: 200px;
+        border: 1px solid white;
+        width: 18px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: larger;
+    }
+    .scroll-container5 .ts{
+        position: relative;
+        bottom: 70px;
+        left: 10px;
+        color: white;
+        font-size: medium;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .scroll-container5 .text{
+        position: relative;
+        color: white;
+        top: -89px;
+        left: 10px;
+    }
+    .scroll-container5 .symbol{
+        position: relative;
+        top: -145px;
+        left: 200px;
+        border: 1px solid white;
+        width: 18px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: larger;
+    }
+    .scroll-container6 .ts{
+        position: relative;
+        bottom: 70px;
+        left: 10px;
+        color: white;
+        font-size: medium;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .scroll-container6 .text{
+        position: relative;
+        color: white;
+        top: -89px;
+        left: 10px;
+    }
+    .scroll-container6 .symbol{
+        position: relative;
+        top: -145px;
+        left: 200px;
+        border: 1px solid white;
+        width: 18px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: larger;
+    }
+    .sections{
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        width: 100%;
+    }
+    .section{
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px;
+        width: 400px;
+        height: 500px;
+    }
+    .app .img{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+    .align span{
+        color: white;
+        position: relative;
+        bottom: 260px;
+        left: 25px;
+    }
+    .align p{
+        height: 70px;
+        width: 70px;
+        border: 1px solid blue;
+        border-radius: 50px;
+        background-color: blue;
+        font-size: large;
+        position: relative;
+        bottom: 300px;
+        left: 290px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .about h3{
+        position: relative;
+        bottom: 120px;
+        left: 5px;
+    }
+    .about h4{
+        position: relative;
+        bottom: 130px;
+        font-weight: lighter;
+        font-size: smaller;
+        color: blue;
+        left: 5px;
+    }
+    .about p{
+        position: relative;
+        font-weight: lighter;
+        font-size: small;
+        bottom: 140px;
+        left: 5px;
+        text-align: left;
+    }
+    [class=tb1],tr,td{
+        position: relative;
+        bottom: 50px;
+        border-radius: 20px;
+        display: flex;
+        gap: 50px;
+        left: 6px;
+    }
+    .box{
+        display: flex;
+        justify-content: space-around;
+        gap: 5px;
+        width: 100%;
+    }
+    .box1{
+        width: 255px;
+        box-shadow: 1px 1px 5px;
+    }
+    .box1 .img{
+        position: relative;
+        left: 90px;
+        top: 20px;
+    }
+    .box1 .about{
+        position: relative;
+        top: 130px;
+        text-align: center;
+    }
+    .box2{
+        width: 255px;
+        box-shadow: 1px 1px 5px;
+    }
+    .box2 .img{
+        position: relative;
+        left: 90px;
+        top: 20px;
+    }
+    .box2 .about{
+        position: relative;
+        top: 130px;
+        text-align: center;
+    }
+    .box3{
+        width: 255px;
+        box-shadow: 1px 1px 5px;
+    }
+    .box3 .img{
+        position: relative;
+        left: 90px;
+        top: 20px;
+    }
+    .box3 .about{
+        position: relative;
+        top: 130px;
+        text-align: center;
+    }
+    .part{
+        display: flex;
+        width: 100%;
+    }
+    .part1{
+        height: 100px;
+        width: 450px;
+    }
+    .part1 h3{
+        position: relative;
+        left: 100px;
+    }
+    .part1 .para1{
+        font-size: medium;
+        font-weight: lighter;
+        position: relative;
+        left: 100px;
+        text-align: left;
+    }
+    .part1 .para2{
+        font-size: medium;
+        font-weight: lighter;
+        position: relative;
+        left: 100px;
+        text-align: left;
+    }
+    .part1 button{
+        background-color: blue;
+        padding: 5px 5px;
+        position: relative;
+        left: 100px;
+    }
+    .part2{
+        position: relative;
+        left: 150px;
+        top: 30px;
+    }
+    .t1{
+        border: 1px solid black;
+        padding: 5px;
+        width: 500px;
+        display: flex; 
+        gap: 300px;
+    }
+    .t1 h1{
+        border: 2px solid blue;
+        height: 15px;
+        width: 15px;
+        border-radius: 10px;
+        background-color: blue;
+    }
+    .t2{
+        border: 1px solid black;
+        padding: 5px;
+    }
+    .t3{
+        border: 1px solid black;
+        padding: 5px;
+        display: flex;
+        gap: 290px;
+    }
+    .t3 h1{
+        border: 1px solid black;
+        height: 15px;
+        width: 15px;
+        border-radius: 10px;
+    }
+    [class="vt"]{
+        position: relative;
+        bottom: 290px;
+        left: 500px;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .st{
+        display: flex;
+        justify-content: space-around;
+        gap: 5px;
+    }
+    .st1{
+        height: 300px;
+        width: 250px;
+        border: 1px solid black;
+        background: linear-gradient(blue 35%,white 10%);
+        border-radius: 5px;
+        text-align: center;
+    }
+    .st1 h3{
+        color: white;
+    }
+    .st1 h4{
+        position: relative;
+        bottom: 14px;
+        color: white;
+    }
+    .st1 h5{
+        position: relative;
+        bottom: 30px;
+        color: white;
+    }
+    .st1 p{
+        font-size: small;
+        font-weight: lighter;
+        display: flex;
+        gap: 3px;
+        position: relative;
+        bottom: 20px;
+        justify-content: center;
+    }
+    .st1 button{
+        background-color: blue;
+        padding: 5px 5px;
+        position: relative;
+        bottom: 15px;
+        border: 1px solid blue;
+        color: white;
+    }
+    .st2{
+        height: 300px;
+        width: 250px;
+        border: 1px solid black;
+        background: linear-gradient(blue 35%,white 10%);
+        border-radius: 5px;
+        text-align: center;
+    }
+    .st2 h3{
+        color: white;
+    }
+    .st2 h4{
+        position: relative;
+        bottom: 14px;
+        color: white;
+    }
+    .st2 h5{
+        position: relative;
+        bottom: 30px;
+        color: white;
+    }
+    .st2 p{
+        font-size: small;
+        font-weight: lighter;
+        display: flex;
+        gap: 3px;
+        position: relative;
+        bottom: 20px;
+        justify-content: center;
+    }
+    .st2 button{
+        background-color: blue;
+        padding: 5px 5px;
+        position: relative;
+        bottom: 15px;
+        border: 1px solid blue;
+        color: white;
+    }
+    .st3{
+        height: 300px;
+        width: 250px;
+        border: 1px solid black;
+        background: linear-gradient(blue 35%,white 10%);
+        border-radius: 5px;
+        text-align: center;
+    }
+    .st3 h3{
+        color: white;
+    }
+    .st3 h4{
+        position: relative;
+        bottom: 14px;
+        color: white;
+    }
+    .st3 h5{
+        position: relative;
+        bottom: 30px;
+        color: white;
+    }
+    .st3 p{
+        font-size: small;
+        font-weight: lighter;
+        display: flex;
+        gap: 3px;
+        position: relative;
+        bottom: 20px;
+        justify-content: center;
+    }
+    .st3 button{
+        background-color: blue;
+        padding: 5px 5px;
+        position: relative;
+        bottom: 15px;
+        border: 1px solid blue;
+        color: white;
+    }
+    .maps{
+        width: 100%;
+    }
+    .bn{
+        position: relative;
+        left: 600px;
+        background-color: blue;
+        border: 1px solid blue;
+        padding: 5px 5px;
+        color: white;
+    }
+    .p1{
+        font-size: ;
+        font-weight: lighter;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .pic{
+        list-style: none;
+        display: flex;
+        gap: 7px;
+        justify-content: flex-start;   
+    }
+    .ft1 ul li a ion-icon{
+        color: white;
+        background-color: gray;
+        height: 20px;
+        width: 20px;
+        padding: 5px;
+        border-radius: 20px;
+        position: relative;
+        right: 35px;
+    }
+    .ft{
+        display: flex;
+        gap: 90px;
+        width: 100%;
+    }
+    .sk h2{
+        position: relative;
+        width: 510%;
+        left: 20px;
+    }
+    .pic3{
+        position: relative;
+        top: 80px;
+    }
+    .pre{
+        position: relative;
+        right: 110px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="./assets/drive-download-20240715T124514Z-001/logo.png" height-="50px" width="100px">
+    <div class="navbar">
+        <ul>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">Most Visited</a></li>
+        <li><a href="#">Entries</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+    </header>
+    <div class="container">
+        <img class="bg" src="./assets/drive-download-20240715T124514Z-001/main_banner.jpg" height="600px" width="100%">
+        <div class="line"></div>
+        <div class="text1"><h2>Best Finder For You</h2></div>
+        <div class="text2">Suspendisse eu lorem massa. Integer sit amet posuere tellus.</div>
+        <div class="text3">Discover More</div>
+        <div class="search-bar">
+            <P>Yourname</P>
+            <p>Type Location</p>
+            <p>Hotels</p>
+            <button>Search Now</button>
+        </div>
+    </div>
+    <center><a href="#">Popular Places</a>
+    <p>Integer sapien odio</p><br></center>
+    <div class="scroll-container">
+    <div class="scroll-container1">
+        <img src="./assets/drive-download-20240715T124514Z-001/popular_item_1.jpg">
+        <p class="ts">Mauris tempus</p>
+        <h6 class="text">76 listings</h6>
+        <h5 class="symbol">+</h5>
+    </div>
+    <div class="scroll-container2">
+        <img src="./assets/drive-download-20240715T124514Z-001/popular_item_2.jpg">
+        <p class="ts">Aenean dolor</p>
+        <h6 class="text">18 listings</h6>
+        <h5 class="symbol">+</h5>
+    </div>
+    <div class="scroll-container3">
+        <img src="./assets/drive-download-20240715T124514Z-001/popular_item_3.jpg">
+        <p class="ts">nunc at quam</p>
+        <h6 class="text">55 listings</h6>
+        <h5 class="symbol">+</h5>    
+    </div>
+    <div class="scroll-container4">
+        <img src="./assets/drive-download-20240715T124514Z-001/popular_item_4.jpg">
+        <p class="ts"> Fusce ac turpis</p>
+        <h6 class="text">60 listings</h6>
+        <h5 class="symbol">+</h5>
+    </div>
+    <div class="scroll-container5">
+        <img src="./assets/drive-download-20240715T124514Z-001/popular_item_5.jpg">
+        <p class="ts">Lorem ipsum</p>
+        <h6 class="text">82 listings</h6>
+        <h5 class="symbol">+</h5>    
+    </div>
+    <div class="scroll-container6">
+        <img src="./assets/drive-download-20240715T124514Z-001/popular_item_1.jpg">
+        <p class="ts">Praesent nec</p>
+        <h6 class="text">70 listings</h6>
+        <h5 class="symbol">+</h5>
+    </div>
+    </div>
+    <center><a href="#">Featured Places</a>
+    <p>Praesent nec dui sed urna</p></center>
+    <div class="sections">
+    <div class="section">
+        <div class="app">
+            <div class="img"><img src="./assets/drive-download-20240715T124514Z-001/featured_item_1.jpg"></div>
+            <div class="align">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p>28 August</p>
+            </div>
+        </div>
+        <div class="about">
+            <h3>Lorem ipsum dolor</h3>
+            <h4>Category One</h4>
+            <p>Vestibulum id est felis vulputate hendrent Suspendisse dapibus turpis in dui pulvinar imperdiet Nunc consectetur </p>
+        </div>
+            <table>
+                <tr>
+                    <td>ADD TO FAVORITES</td>
+                    <td>CONTINUE READIING</td>
+                </tr>
+            </table>
+    </div>
+    <div class="section">
+        <div class="app">
+            <div class="img"><img src="./assets/drive-download-20240715T124514Z-001/featured_item_2.jpg"></div>
+            <div class="align">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p>20 August</p>
+            </div>
+        </div>
+        <div class="about">
+            <h3>Nullam nibh lacus</h3>
+            <h4>Category Two</h4>
+            <p>Mauris sit amet quam congue. pulvinar urna et.congue diam Suspendisse eu lorem massa.Integer sit amet posuere.</p>
+        </div>
+            <table>
+                <tr>
+                    <td>ADD TO FAVORITES</td>
+                    <td>CONTINUE READIING</td>
+                </tr>
+            </table>
+    </div><div class="section">
+        <div class="app">
+            <div class="img"><img src="./assets/drive-download-20240715T124514Z-001/featured_item_3.jpg"></div>
+            <div class="align">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <p>12 October</p>
+            </div>
+        </div>
+        <div class="about">
+            <h3>Suspendisse semper non</h3>
+            <h4>Category Three</h4>
+            <p>Praesent iaculis gravida elementum.Proin fermentum neque facilisis semper pharetra.Sed vestibulum vehicula tincidunt</p>
+        </div>
+            <table>
+                <tr>
+                    <td>ADD TO FAVORITES</td>
+                    <td>CONTINUE READIING</td>
+                </tr>
+            </table>
+    </div>
+    </div>
+    <Br><br><br><br>
+    <center><a href="#">Our Services</a>
+    <p>Best Template Site</p></center>
+    <div class="box">
+    <div class="box1">
+        <div class="img"><img src="./assets/drive-download-20240715T124514Z-001/service_icon_1.png"></div> 
+        <div class="about">
+            <h3>High Quality Design</h3>
+            <p>Etiam viverra nibh at lorem hendrerit porta non nec ligula Donec hendrerit porttitor pretium Suspendisse fermentum nec risus.</p>
+        </div>
+    </div>
+    <div class="box2">
+        <div class="img"><img src="./assets/drive-download-20240715T124514Z-001/service_icon_2.png"></div> 
+        <div class="about">
+            <h3>Fully Customizable</h3>
+            <p>Vivamus nec vehicula felis sit amet convallis ex.Aenean dolor risus rutrum at tincidunt eget.placerat ac mauris.</p>
+        </div>
+    </div>
+    <div class="box3">
+        <div class="img"><img src="./assets/drive-download-20240715T124514Z-001/service_icon_3.png"></div> 
+        <div class="about">
+            <h3>Best HTML CSS Layout</h3>
+            <p>Praesent nec dui sed urna phareṭra dapibus at ac elit.Aenean hendrerit metus leo quis viverra purus condimentum nec.</p>
+        </div>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="part">
+    <div class="part1">
+        <h3>In hac habitasse platea dictumst</h3>
+        <p class="para1">Aenean hendreit metus leo quis viverra purus condimentum nec.Pellentesque a sem semper lobortis mauris non varius urna Quique sodales purus eu tellus fringilla</p>
+        <p class="para2">Mauris sit amet quam congue pulvinar urna et congue diam Suspendisse eu lorem massa integer sit amet posuere tellus id efficitur leo in hac habitasse platea dictumst.</p>
+        <button>Discover More</button>
+        </div>
+        <div class="part2">
+    <div class="t1"><p>Ut in dapibus ipsum</p><h1></h1></div>
+    <div class="t2">Nulla eget aliquet dui. vitae tincidunt nulla. Sed sagittis odio vitae<br>
+    auctor volutpat in semper ex neque. ut hendrerit mauris rutrum eget<br>
+    integer consectetur neque eu dictum porta. Sed et risus ac<br>
+    sapien congue mattis.</div>
+    <div class="t3"><p>Vivamus ligula metus</p><h1></h1></div>
+    <div class="t3"><p>Suspendisse dapibus</p><h1></h1></div>
+    </div>
+    </div>
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+        <video controls src="./assets/4205697-uhd_3840_2160_30fps.mp4" height="500px" width="100%"></video></pre>
+    <h4 class="vt"><pre>          Video Presentation</pre></h4>
+    <h3 class="vt">Sed et risus ac sapien congue mattis.</h3>
+</div>
+<center><a href="#">Pricing Tables</a>
+    <p>Duis molestie ipsum id faucibus fermentum</p></center>
+    <div class="st">
+    <div class="st1">
+        <h3>Starter Plan</h3>
+        <h4>$25</h4>
+        <h5>/monthly</h5>
+        <p>100 Suspendisse dapibus</p>
+        <p>10x Paleo celiac enamel</p>
+        <p>Williamsburg organic post ironic</p>
+        <p>Helvetica pinterest yuccie</p>
+        <p>Plaid shabby chic godard</p>
+        <button>Buy it Now</button>
+    </div>
+    <div class="st2">
+        <h3>Premium Plan</h3>
+        <h4>$45</h4>
+        <h5>/monthly</h5>
+        <p>200 Suspendisse dapibus</p>
+        <p>20x Paleo celiac enamel</p>
+        <p>Williamsburg organic post ironic</p>
+        <p>Helvetica pinterest yuccie</p>
+        <p>Plaid shabby chic godard</p>
+        <button>Buy it Now</button>
+    </div>
+    <div class="st3">
+        <h3>Advanced Plan</h3>
+        <h4>$85</h4>
+        <h5>/monthly</h5>
+        <p>400 Suspendisse dapibus</p>
+        <p>40x Paleo celiac enamel</p>
+        <p>Williamsburg organic post ironic</p>
+        <p>Helvetica pinterest yuccie</p>
+        <p>Plaid shabby chic godard</p>
+        <button>Buy it Now</button>
+    </div>
+    </div>
+    <pre>
+
+
+
+
+    <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253609.67459239633!2d-1.780919013236496!3d6.69005807262354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb93e59a4e4c49%3A0x829c711d7b65e682!2sKumasi%2C%20Ghana!5e0!3m2!1sen!2sin!4v1721854115973!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></pre>
+    <center><a href="#">Contact Us</a>
+    <p>Vivamus nec vehicula felis</p></center>
+    <button class="bn">Talk to us</button>
+    <div class="ft">
+    <div class="ft1">
+        <img src="./assets/drive-download-20240715T124514Z-001/footer_logo.png">
+        <p class="p1">Mauris sit amet quam congue,pulvinar urna et. congue diam Suspendisse <br>eu lorem massa. Integer sit amet posuere tellus. id efficitur leo in hac<br> habitasse platea dictumst.</p>
+        <ul class="pic">
+            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-rss"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-dribbble"></ion-icon></a></li>
+        </ul>
+        </div>
+        <div class="ft2">
+            <div class="sk"><h2>Useful Links</h2></div>
+        <ul class="pic2">
+            <li>Help FAQs</li>
+            <li>Register</li>
+            <li>Login</li>
+            <li>My Profile</li>
+            <li>How it Works?</li>
+            <li>More About Us</li></ul></div>
+        <div class="ft3">
+            <ul class="pic3">
+            <li>Our Clients</li>
+            <li>Partnerships</li>
+            <li>Blog Entries</li>
+            <li>Contact Us</li>
+        </ul>
+        </div>
+        <div class="f4">
+            <h2> Contact Information</h2>
+            <p class="p1">
+                Praesent iaculis gravida elementum. Proin<br> fermentum neque facilisis semper pharetra <br>Sed vestibulum vehicula tincidunt.
+            </p>
+            <pre class="pre">
+                Phone:    010-050-0550
+                Email:    kruthi@gmail.com
+                Address:  Company.co   
+            </pre>
+        </div>
+        </div>
+        
+
+</body>
+</html>
